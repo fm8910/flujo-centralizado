@@ -4,10 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FlujoCentralizadoGitApplication {
+public class FlujoCentralizadoGit {
 
+	//este es el main
 	public static void main(String[] args) {
-		SpringApplication.run(FlujoCentralizadoGitApplication.class, args);
+		SpringApplication
+				.run(FlujoCentralizadoGit.class
+						, args);
 	}
 
 }
