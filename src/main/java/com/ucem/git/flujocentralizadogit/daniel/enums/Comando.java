@@ -1,11 +1,14 @@
 package com.ucem.git.flujocentralizadogit.daniel.enums;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Getter
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Comando {
     INIT("git init","Inicializa un nuevo repositorio Git en un directorio vacío o existente.","git init","Ubicarse en la carpeta donde se clonará el proyecto y ejecutar el comando"),
     ADD("git-add","Agrega cambios o archivos nuevos al índice (staging area)","git add archivo.txt","Agrega el archivo.txt al área de staging"),
@@ -37,6 +40,9 @@ public enum Comando {
     public static Comando getComandoByCode(final String var){
         return getComandos().stream().filter(x->x.getComando().equalsIgnoreCase(var)).findFirst().orElse(null);
     }
-
+    @JsonValue
+    public static List<Comando> getComandostoJSON(){
+        return getComandos();
+    }
 
 }

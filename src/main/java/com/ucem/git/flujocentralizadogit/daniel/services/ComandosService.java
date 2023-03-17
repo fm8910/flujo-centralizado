@@ -8,11 +8,13 @@ import java.util.List;
 @Service
 public class ComandosService {
 
-    public static List<Comando> getComandos(){
+    public List<Comando> getComandos(){
         return Comando.getComandos();
+    }  public List<Comando> getComandostoJSON(){
+        return Comando.getComandostoJSON();
     }
 
-    public static Comando getComandoByCode(final String var){
+    public Comando getComandoByCode(final String var){
         return Comando.getComandoByCode(var);
     }
 
