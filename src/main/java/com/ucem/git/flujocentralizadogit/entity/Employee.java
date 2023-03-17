@@ -15,7 +15,9 @@ public class Employee {
     private String name;
     private String role;
 
-    public Employee(String bilbo_baggins, String burglar) {
+    public Employee(String name, String role) {
+        this.name=name;
+        this.role=role;
     }
 
     public Employee(){
