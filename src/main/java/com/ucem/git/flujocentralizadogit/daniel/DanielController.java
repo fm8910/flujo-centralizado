@@ -24,10 +24,6 @@ public class DanielController {
         this.oComandosService = oComandosService;
     }
 
-//    @GetMapping(value = "/todos", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<List<Comando>> buscarTodos(){
-//        return new ResponseEntity<>(oComandosService.getComandos() , HttpStatus.OK);
-//    }
     @GetMapping(value = "/todos", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Comando>> buscarTodos(){
         return new ResponseEntity<>(oComandosService.getComandostoJSON() , HttpStatus.OK);
